@@ -1,0 +1,58 @@
+2 2 2 2200 0 40
+0.02838
+0.02838
+107 1400 0
+107 1400 0
+1. 1.
+nl nl
+1.9 4.5
+nl nl
+0.6 0.4
+nw  nw
+.3
+nw
+1  500
+nl    nl
+0.7  0.3
+nw    nw
+0. 0.
+1. 1.
+0. 20
+0. 20
+a2aniso1
+
+
+---------------------------------------------------------------------
+
+NOTES:
+line 1: Six integers:
+        em files[==2], no. of lifetimes[NT<=4], tauRs[NR<=3], nchan[=512], 
+        plot option[yes=1, no=0], re_run limit[10 recommended]
+        
+line 2: One float:  time per channel of parallel decay
+line 3: One float:  time per channel of Perpendicular decay.
+line 4: Three integers :
+      3  ch# of rising edge of excitn data,
+        ch# when emission has decayed [<=500],
+        Offset from peak of emission.[ 0 means fit from peak; -3 means 
+        fit from peak-3; 3 means fit from peak+3. 
+line 5:  Three integers:
+        same as line 4;  Applicable for Perpendicular decay.
+
+lines 6&7: Two floats & two floats or nl:
+        Amplitude scale factors [ 1. 1. is recommended.]
+        Windows for above values. Amplitudes cannot be windowed. [==nl,nl]
+
+0lines 8&9:  NT lifetimes  & windows.  All floats; window can be nl or nw.
+lines 10&11: Scale factors for the NT lifetimes: Must add up to 1.0.
+                Windows can be nw (recommended) or as determined
+                in Magic Angle Analysis.
+lines 12&13: Initial Anisotropy r0 [ -0.2 to 0.4]
+                Window as appropriate.
+lines 14&15: NR tauRs and windows.
+lines 16&17:  NR scale factors for the above tauRs; and windows [nw].
+lines 18&19: Two shifts [0.0 recommended] & windows[>=2*time per channel]. 
+line 20&21:  background count for excitation and emission.  One line for
+                parallel and one for perpendicular decay.
+                Note that the excitation decay is common for both emissions.
+line 22:  Filename of exem data.
